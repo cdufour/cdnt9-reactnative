@@ -1,0 +1,5 @@
+** Créer un composant fonctionnel "Counter" **
+Ce composant affichera un bouton "Incr" ainsi qu'un texte
+ayant la valeur 0 par défaut.
+Chaque clic incrémentera cette valeur et mettra l'UI
+à jour
