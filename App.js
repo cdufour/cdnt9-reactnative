@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Demo from './components/Demo'
 import Demo2 from './components/Demo2'
+import Counter from './components/Counter'
+import PlayerList from './components/PlayerList'
 
 // function hello {
 //   console.log('hello')
@@ -26,14 +28,15 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Formation React Native</Text>
-      <Demo />
-
+      {/* <Demo />
       <Button 
         onPress={changeAuth} 
         title={ authenticated ? 'Déconnexion' : 'Connexion' } 
         color={btnColorHexa} />
       <Demo2 authenticated={authenticated} />
       <Demo2 authenticated={authenticated} />
+      <Counter /> */}
+      <PlayerList  />
     </View>
   );
 }
