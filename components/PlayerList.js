@@ -3,6 +3,7 @@ import { Text, View, Button } from 'react-native';
 import { players } from '../players'
 import PlayerDetail from './PlayerDetail'
 import PlayerForm from './PlayerForm'
+import { generateRandomId } from '../utils'
 
 export default function PlayerList() {
 
@@ -12,6 +13,24 @@ export default function PlayerList() {
     const deletePlayer = (playerId) => {
         let filteredPlayers = playersState.filter(player => player.id !== playerId)
         setPlayersState(filteredPlayers)
+    }
+
+    const addPlayer = (lastname) => {
+        // idéalement, vérifier que l'id n'est pas déjà pris
+        const id = generateRandomId(10, 1000)
+        let player = { id, lastname }
+
+        // Copie du state pour modification d'un tableau
+        // Approche 1
+        // "vraie" copie (par valeur et non par référence)
+        // du tableau playersState grâce à slice
+        // let playersCopy = playersState.slice()
+        // playersCopy.push(player)
+        // setPlayersState(playersCopy)
+
+        // Approche 2
+        setPlayersState([...playersState, player])
+        
     }
 
     // let playersMapped = players
@@ -46,7 +65,7 @@ export default function PlayerList() {
         <View>
             <Text>Joueurs ({playersState.length})</Text>
             { playersMapped }
-            <PlayerForm onSave={(lastname) => console.log(lastname)} />
+            <PlayerForm onSave={addPlayer} />
         </View>
     )
 

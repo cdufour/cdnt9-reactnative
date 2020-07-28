@@ -4,6 +4,8 @@ import Demo from './components/Demo'
 import Demo2 from './components/Demo2'
 import Counter from './components/Counter'
 import PlayerList from './components/PlayerList'
+import PlayerFetch from './components/PlayerFetch'
+import Example from './components/Example'
 
 // function hello {
 //   console.log('hello')
@@ -35,8 +37,10 @@ export default function App() {
         color={btnColorHexa} />
       <Demo2 authenticated={authenticated} />
       <Demo2 authenticated={authenticated} />
-      <Counter /> */}
+      <Counter /> 
       <PlayerList  />
+      <PlayerFetch api="http://google.com" />*/}
+      <Example />
     </View>
   );
 }
