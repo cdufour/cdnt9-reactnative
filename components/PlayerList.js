@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Text, View, Button } from 'react-native';
+import React, { useState } from 'react'
+import { Text, View } from 'react-native'
 import { players } from '../players'
 import PlayerDetail from './PlayerDetail'
 import PlayerForm from './PlayerForm'
